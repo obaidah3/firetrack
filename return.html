@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Realtime Attendance Dashboard</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <link rel="stylesheet" href="return.style.css" />
+</head>
+<body>
+
+<h1>Realtime Attendance Dashboard</h1>
+
+<div class="controls">
+  <label>Official Hour:</label>
+  <input type="number" id="hourInput" value="9" min="0" max="23">
+  <label>Minute:</label>
+  <input type="number" id="minuteInput" value="0" min="0" max="59">
+  <button onclick="renderTable()">Update</button>
+  <button onclick="downloadExcel()">Download as Excel</button>
+</div>
+
+<table id="attendanceTable">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Date</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Rows will be inserted here -->
+  </tbody>
+</table>
+
+<!-- JavaScript Module -->
+<script type="module" src="return.script.js"></script>
+
+</body>
+</html>

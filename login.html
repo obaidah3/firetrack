@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <link rel="stylesheet" href="login.style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Login to Attendance System</h2>
+
+    <form id="loginForm">
+      <!-- Email -->
+      <label for="email">Email address</label>
+      <input type="email" id="email" required />
+
+      <!-- Password -->
+      <label for="password">Password</label>
+      <input type="password" id="password" required />
+
+      <!-- Role Selection -->
+      <div class="role-select">
+        <label>Select Role:</label><br/>
+        <label><input type="radio" name="role" value="student" /> Student</label>
+        <label><input type="radio" name="role" value="instructor" /> Instructor</label>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit">Login</button>
+    </form>
+
+    <!-- Message -->
+    <p id="errorMessage" class="hidden">Invalid login credentials.</p>
+  </div>
+
+  <script type="module" src="login.script.js"></script>
+</body>
+</html>
