@@ -85,15 +85,18 @@ graph TD
 
 ```plaintext
 📁 FirebaseAttendanceSystem
-├── index.html         # Instructor dashboard (read-only view)
-├── register.html      # Student attendance form
-├── login.html         # Login page for students/instructors
-├── return.html        # Instructor redirect after login
-├── script.js          # Main dashboard logic (data rendering)
-├── register.js        # Handles student form submission
-├── login.js           # Simple role-based login logic
-├── style.css          # All UI styling
-├── README.md          # You’re here
+├── index.html            # Instructor dashboard (read-only view)
+├── login.html            # Login page for students/instructors
+├── login.script.js       # JavaScript for login page
+├── login.style.css       # CSS for login page
+├── return.html           # Instructor redirect after login
+├── return.script.js      # JavaScript for return page
+├── return.style.css      # CSS for return page
+├── script.js             # Main dashboard logic (data rendering)
+├── style.css             # Global UI styling or main style file
+├── login sample.xlsx     # Sample data file (likely for demo/import)
+├── LICENSE               # License info
+├── README.md             # Project description and usage
 ````
 
 ---
@@ -151,8 +154,23 @@ Simply double-click `register.html` or `index.html` in your browser.
 ---
 
 ## 📸 Screenshots
+<img width="1919" height="892" alt="Image" src="https://github.com/user-attachments/assets/8f915c85-493c-4415-b699-ea66813da423" />
 
-> *(Add screenshots of register form + dashboard + Excel export here once deployed)*
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/670de9bb-c24f-4435-990a-17041f01f69e" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/af26af8c-4905-474e-8bc3-e8b996ebb1c8" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/fa996cbe-c66b-4e9a-8811-97e35fd8ed65" />
+
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/b385fd07-723d-42f5-8c31-2c4ee9e9eb82" />
+
+<img width="1919" height="895" alt="Image" src="https://github.com/user-attachments/assets/ac072d6b-e945-4923-a650-3fcd3d37afe8" />
+
+<img width="1065" height="552" alt="Image" src="https://github.com/user-attachments/assets/4ae46d22-6176-4ea7-9e8c-dc491d2dea5c" />
+
+<img width="1916" height="756" alt="Image" src="https://github.com/user-attachments/assets/2a071084-8df9-4aa7-a672-ffee011fb96c" />
+
+
 
 ---
 
