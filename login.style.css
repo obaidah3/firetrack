@@ -107,3 +107,9 @@ button:hover {
 .hidden {
   display: none;
 }
+
+#errorMessage {
+  color: red;
+  margin-top: 10px;
+  font-weight: bold;
+}

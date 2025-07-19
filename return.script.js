@@ -22,7 +22,7 @@ onValue(studentsRef, (snapshot) => {
   renderTable();
 });
 
-//  Validation Functions
+// ✅ Validation Functions
 function isValidID(id) {
   return /^\d+$/.test(id); // Digits only
 }
@@ -46,7 +46,7 @@ window.renderTable = function () {
     const studentId = student.studentId || id;
     const email = student.email || "";
 
-    //  Validate fields before rendering
+    // ✅ Validate fields before rendering
     if (!isValidID(studentId) || !isValidName(name) || !isValidEmail(email)) {
       console.warn(`⚠️ Skipped invalid entry: ${studentId} - ${name}`);
       continue; // skip invalid row

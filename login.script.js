@@ -1,27 +1,74 @@
-document.getElementById("loginForm").addEventListener("submit", function (e) {
+// login.script.js
+
+// بيانات المستخدمين (ثابتة للتجربة)
+const users = [
+  { email: "student1@example.com", password: "1234", role: "student" },
+  { email: "student2@example.com", password: "abcd", role: "student" },
+  { email: "instructor1@example.com", password: "admin1", role: "instructor" },
+  { email: "instructor2@example.com", password: "admin2", role: "instructor" },
+];
+
+// عناصر من الـ DOM
+const form = document.getElementById("loginForm");
+const emailInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
+const errorMessage = document.getElementById("errorMessage");
+
+// إضافة مستمع لحدث إرسال النموذج
+form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const email = document.getElementById("email").value.trim().toLowerCase();
-  const password = document.getElementById("password").value.trim();
-  const role = document.getElementById("role").value;
+  const email = emailInput.value.trim();
+  const password = passwordInput.value.trim();
+  const role = document.querySelector('input[name="role"]:checked')?.value;
 
-  const users = [
-    { email: "student1@school.com", password: "1234", role: "student" },
-    { email: "student2@school.com", password: "5678", role: "student" },
-    { email: "instructor1@school.com", password: "admin123", role: "instructor" },
-  ];
+  // التحقق من ملء جميع الحقول
+  if (!email || !password || !role) {
+    showError("⚠️ Please fill in all fields.");
+    return;
+  }
 
-  const matchedUser = users.find(
-    (user) => user.email === email && user.password === password && user.role === role
-  );
+  // البحث عن المستخدم بالبريد فقط
+  const userByEmail = users.find(u => u.email === email);
 
-  if (matchedUser) {
-    if (role === "student") {
-      window.location.href = "index.html";
-    } else if (role === "instructor") {
-      window.location.href = "return.html";
-    }
-  } else {
-    document.getElementById("error").innerText = "Incorrect email, password, or role.";
+  if (!userByEmail) {
+    showError("❌ Email not found. Please check your email address.");
+    return;
+  }
+
+  // تحقق من كلمة السر
+  if (userByEmail.password !== password) {
+    showError("❌ Incorrect password. Please try again.");
+    return;
+  }
+
+  // تحقق من الدور
+  if (userByEmail.role !== role) {
+    showError(`❌ Incorrect role selected. This email is registered as a "${userByEmail.role}".`);
+    return;
+  }
+
+  // ✅ تسجيل دخول ناجح
+  showSuccess(`✅ Login successful as ${role}!`);
+
+  // التوجيه حسب الدور
+  if (role === 'student') {
+    window.location.href = 'index.html';
+  } else if (role === 'instructor') {
+    window.location.href = 'return.html';
   }
 });
+
+// دالة لعرض رسالة الخطأ
+function showError(message) {
+  errorMessage.textContent = message;
+  errorMessage.classList.remove("hidden");
+  errorMessage.style.color = "red";
+}
+
+// دالة لعرض رسالة النجاح
+function showSuccess(message) {
+  errorMessage.textContent = message;
+  errorMessage.classList.remove("hidden");
+  errorMessage.style.color = "green";
+}
