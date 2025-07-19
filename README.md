@@ -1,6 +1,3 @@
-# firetrack
-**FireTrack – A Cloud-Based Attendance Tracker for Smart Classrooms**
-
 # 📅 Firebase Attendance System
 
 A real-time attendance tracking web app using **Firebase Realtime Database**, allowing students to register attendance and instructors to monitor it dynamically — with built-in validation, late detection logic, and Excel export.
