@@ -7,7 +7,9 @@ A real-time attendance tracking web app using **Firebase Realtime Database**, al
 ![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
 
 ---
-
+⚠️ Disclaimer: This project is for educational purposes only. The exposed API key has been revoked and does not pose any security threat.
+---
+---
 ## 🚀 Features
 
 - ✅ **Real-time attendance sync** with Firebase.
