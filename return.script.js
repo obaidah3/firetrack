@@ -2,7 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/fireba
 import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDjfH9vsh9jXwRoFz2Y3X4bWcYfCt9eG9Y",
+  apiKey: "apiKey",
   authDomain: "attendance-system-72015.firebaseapp.com",
   databaseURL: "https://attendance-system-72015-default-rtdb.firebaseio.com",
   projectId: "attendance-system-72015",
