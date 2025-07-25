@@ -8,7 +8,7 @@ A real-time attendance tracking web app using **Firebase Realtime Database**, al
 
 ---
 ⚠️ Disclaimer: This project is for educational purposes only. The exposed API key has been revoked and does not pose any security threat.
----
+
 ---
 ## 🚀 Features
 
